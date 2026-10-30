@@ -1,0 +1,7 @@
+# Project Rules: GraphFlow BAC & Algorithm Visualizer
+
+1. **Architecture**: Strict separation between pure algorithm/graph logic (`src/core/`) and React UI (`src/components/`). Zero React imports inside `src/core/`.
+2. **Romanian BAC Standard (1-Based Indexing)**: Nodes are ALWAYS numbered `1` to `N` seamlessly. When node `k` is deleted, nodes `> k` automatically re-index so nodes are always strictly `1..N`, matching standard C++ adjacency matrices `a[1..n][1..n]`.
+3. **Visual Style**: Modern dark IDE aesthetic ("Liquid Glass" dark slate `#090d16`, subtle borders `border-white/10`, glowing accents in cyan/indigo/emerald).
+4. **Completeness**: NEVER leave placeholders, `TODO` comments, or truncated code. Always write complete, production-ready TypeScript with strict typing.
+5. **Verification**: After finishing each prompt, run `npm run build` in the terminal to verify zero TypeScript compilation errors.
