@@ -143,3 +143,24 @@ span.gf-matrix-hot {
     animation: none;
   }
 }
+
+/* Netlify injects this badge on the edge. Match only that widget and its host. */
+#netlify-badge,
+.netlify-badge,
+#nl-badge-frame,
+a[href*="netlify.com"] img[alt*="Netlify"],
+a[href*="netlify.com"]:has(img[alt*="Netlify"]),
+[style*="position: fixed"]:has(
+  #netlify-badge,
+  .netlify-badge,
+  #nl-badge-frame,
+  a[href*="netlify.com"] img[alt*="Netlify"]
+),
+[style*="position:fixed"]:has(
+  #netlify-badge,
+  .netlify-badge,
+  #nl-badge-frame,
+  a[href*="netlify.com"] img[alt*="Netlify"]
+) {
+  display: none !important;
+}
